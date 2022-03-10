@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B59DF8927D884AE00FB13AE /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59DF8827D884AE00FB13AE /* SegmentedController.swift */; };
+		5B59DF8B27D8997800FB13AE /* DestinationStopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59DF8A27D8997800FB13AE /* DestinationStopTableViewController.swift */; };
+		5B59DF8D27D899A400FB13AE /* DepartureStopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59DF8C27D899A400FB13AE /* DepartureStopTableViewController.swift */; };
+		5B59DF8F27D899C300FB13AE /* DepartureStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59DF8E27D899C300FB13AE /* DepartureStopTableViewCell.swift */; };
+		5B59DF9127D899D200FB13AE /* DestinationStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59DF9027D899D200FB13AE /* DestinationStopTableViewCell.swift */; };
 		5B7115DD27D0B233006BF7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7115DC27D0B233006BF7D6 /* AppDelegate.swift */; };
 		5B7115DF27D0B233006BF7D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7115DE27D0B233006BF7D6 /* SceneDelegate.swift */; };
-		5B7115E127D0B233006BF7D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7115E027D0B233006BF7D6 /* ViewController.swift */; };
 		5B7115E427D0B233006BF7D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7115E227D0B233006BF7D6 /* Main.storyboard */; };
 		5B7115E627D0B235006BF7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7115E527D0B235006BF7D6 /* Assets.xcassets */; };
 		5B7115E927D0B235006BF7D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7115E727D0B235006BF7D6 /* LaunchScreen.storyboard */; };
+		5B7115F127D0B2D1006BF7D6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7115F027D0B2D1006BF7D6 /* MainTableViewController.swift */; };
+		5B7115F327D0B2E5006BF7D6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7115F227D0B2E5006BF7D6 /* MainTableViewCell.swift */; };
+		5B78212A27D1DBDF0001F691 /* BusSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78212927D1DBDF0001F691 /* BusSearchTableViewController.swift */; };
+		5B78212C27D1DBF70001F691 /* BusSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78212B27D1DBF70001F691 /* BusSearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B59DF8827D884AE00FB13AE /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
+		5B59DF8A27D8997800FB13AE /* DestinationStopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationStopTableViewController.swift; sourceTree = "<group>"; };
+		5B59DF8C27D899A400FB13AE /* DepartureStopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureStopTableViewController.swift; sourceTree = "<group>"; };
+		5B59DF8E27D899C300FB13AE /* DepartureStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureStopTableViewCell.swift; sourceTree = "<group>"; };
+		5B59DF9027D899D200FB13AE /* DestinationStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationStopTableViewCell.swift; sourceTree = "<group>"; };
 		5B7115D927D0B233006BF7D6 /* Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7115DC27D0B233006BF7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7115DE27D0B233006BF7D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B7115E027D0B233006BF7D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B7115E327D0B233006BF7D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B7115E527D0B235006BF7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7115E827D0B235006BF7D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7115EA27D0B235006BF7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7115F027D0B2D1006BF7D6 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		5B7115F227D0B2E5006BF7D6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		5B78212927D1DBDF0001F691 /* BusSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSearchTableViewController.swift; sourceTree = "<group>"; };
+		5B78212B27D1DBF70001F691 /* BusSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +74,37 @@
 			children = (
 				5B7115DC27D0B233006BF7D6 /* AppDelegate.swift */,
 				5B7115DE27D0B233006BF7D6 /* SceneDelegate.swift */,
-				5B7115E027D0B233006BF7D6 /* ViewController.swift */,
 				5B7115E227D0B233006BF7D6 /* Main.storyboard */,
+				5B78212827D1DBB60001F691 /* Cell */,
+				5B78212727D1DBAD0001F691 /* Controller */,
 				5B7115E527D0B235006BF7D6 /* Assets.xcassets */,
 				5B7115E727D0B235006BF7D6 /* LaunchScreen.storyboard */,
 				5B7115EA27D0B235006BF7D6 /* Info.plist */,
 			);
 			path = Bus;
+			sourceTree = "<group>";
+		};
+		5B78212727D1DBAD0001F691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7115F027D0B2D1006BF7D6 /* MainTableViewController.swift */,
+				5B78212927D1DBDF0001F691 /* BusSearchTableViewController.swift */,
+				5B59DF8827D884AE00FB13AE /* SegmentedController.swift */,
+				5B59DF8A27D8997800FB13AE /* DestinationStopTableViewController.swift */,
+				5B59DF8C27D899A400FB13AE /* DepartureStopTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B78212827D1DBB60001F691 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B7115F227D0B2E5006BF7D6 /* MainTableViewCell.swift */,
+				5B78212B27D1DBF70001F691 /* BusSearchTableViewCell.swift */,
+				5B59DF8E27D899C300FB13AE /* DepartureStopTableViewCell.swift */,
+				5B59DF9027D899D200FB13AE /* DestinationStopTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7115E127D0B233006BF7D6 /* ViewController.swift in Sources */,
+				5B59DF9127D899D200FB13AE /* DestinationStopTableViewCell.swift in Sources */,
+				5B7115F127D0B2D1006BF7D6 /* MainTableViewController.swift in Sources */,
+				5B59DF8B27D8997800FB13AE /* DestinationStopTableViewController.swift in Sources */,
 				5B7115DD27D0B233006BF7D6 /* AppDelegate.swift in Sources */,
+				5B59DF8F27D899C300FB13AE /* DepartureStopTableViewCell.swift in Sources */,
+				5B78212C27D1DBF70001F691 /* BusSearchTableViewCell.swift in Sources */,
+				5B59DF8927D884AE00FB13AE /* SegmentedController.swift in Sources */,
+				5B59DF8D27D899A400FB13AE /* DepartureStopTableViewController.swift in Sources */,
 				5B7115DF27D0B233006BF7D6 /* SceneDelegate.swift in Sources */,
+				5B7115F327D0B2E5006BF7D6 /* MainTableViewCell.swift in Sources */,
+				5B78212A27D1DBDF0001F691 /* BusSearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
