@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
 class SegmentedController: UIViewController {
-
+    var text = UserDefaults.standard.value(forKey: "BusStop")as!String
+    @IBOutlet weak var Segmented: UISegmentedControl!
     @IBOutlet var ContainerViews: [UIView]!
     @IBAction func segmentedChange(_ sender: UISegmentedControl) {
         ContainerViews.forEach {
@@ -19,7 +19,10 @@ class SegmentedController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let BusStop = text.split(separator: "-")
+        print(BusStop[0])
+        Segmented.setTitle(String(BusStop[0]), forSegmentAt: 0)
+        Segmented.setTitle(String(BusStop[1]), forSegmentAt: 1)
         // Do any additional setup after loading the view.
     }
     

@@ -9,9 +9,11 @@ import UIKit
 import CryptoKit
 import Foundation
 class DestinationStopTableViewController: UITableViewController {
-    var BusNumber = "300"
+    var BusNumber = UserDefaults.standard.value(forKey: "BusName") as!String
     var BusStop :NSMutableArray = []
     var StopStatus :NSMutableArray = []
+    var stopNum :NSMutableArray = []
+    var nextBusTime :NSMutableArray = []
     func getTimeString() -> String {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "EEE, dd MMM yyyy HH:mm:ww zzz"
@@ -20,18 +22,21 @@ class DestinationStopTableViewController: UITableViewController {
         let time = dateFormater.string(from: Date())
         return time
     }
-
     func startParsing(data :NSData)
     {
         let dictdata:NSArray=(try! JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSArray
         for i in 0 ..< (dictdata.count)
         {
             let StopName=(dictdata[i] as! NSDictionary).value(forKey: "StopName")
-            let Estimates=(dictdata[i] as! NSDictionary).value(forKey: "Estimates")
+            //let Estimates=(dictdata[i] as! NSDictionary).value(forKey: "Estimates")
             BusStop[i]=(StopName as! NSDictionary).value(forKey: "Zh_tw") as! NSString
             StopStatus[i]=(dictdata[i] as! NSDictionary).value(forKey: "EstimateTime")
+            stopNum[i]=(dictdata[i] as! NSDictionary).value(forKey: "StopStatus")
+            nextBusTime[i]=(dictdata[i] as! NSDictionary).value(forKey: "NextBusTime")
+            
         }
-        print(StopStatus)
+        //print(StopStatus)
+        print(stopNum)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                    }
@@ -93,15 +98,32 @@ class DestinationStopTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DestinationStopCell", for: indexPath) as! DestinationStopTableViewCell
         var value = Int()
-        if(StopStatus[indexPath.row] is NSNull){
-            cell.EstimateTime.text="未發車"
-            value = 4
-        }
-        else{
+        switch stopNum[indexPath.row] as! Int{
+        case 0:
             value = (StopStatus[indexPath.row]as! Int)/60
             cell.EstimateTime.text = "\(value)"+"分鐘"
+        case 1:
+            let isoFormatter = ISO8601DateFormatter()
+            let date = isoFormatter.date(from: nextBusTime[indexPath.row]as! String)!
+            let dateFormater = DateFormatter()
+            dateFormater.dateFormat = "HH:mm"
+            let time = dateFormater.string(from: date)
+            cell.EstimateTime.text=time
+            value = 4
+        case 2:
+            cell.EstimateTime.text="交管不停靠"
+            value = 4
+        case 3:
+            cell.EstimateTime.text="末班車已過"
+            value = 4
+        case 4:
+            cell.EstimateTime.text="今日未營運"
+            value = 4
+        default:
+            cell.EstimateTime.text="ERROR"
+            value = 4
         }
-        cell.DestinationStopName.text = BusStop[indexPath.row] as! String
+        cell.DestinationStopName.text = BusStop[indexPath.row] as! String?
         cell.EstimateTime.layer.cornerRadius = 10
         cell.EstimateTime.layer.masksToBounds = true
         switch value{
